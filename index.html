@@ -16,22 +16,55 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="#">Morgan Evans</a></li>
+                    <li><a href="#home">Morgan Evans</a></li>
                 </ul>
                 <ul>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#home"
+                            ><i class="mdi mdi-home"></i
+                            ><span class="mobile-only">Home</span></a
+                        >
                     </li>
                     <li>
-                        <a href="#">Education</a>
+                        <a href="#about">
+                            <i class="mdi mdi-information"></i>
+                            About</a
+                        >
                     </li>
                     <li>
-                        <a href="#">Work experience</a>
+                        <a href="#education">
+                            <i class="mdi mdi-school"></i>
+                            Education</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#work">
+                            <i class="mdi mdi-briefcase"></i>
+                            Work experience</a
+                        >
                     </li>
                 </ul>
             </nav>
         </header>
-        <main></main>
+        <main>
+            <div class="viewport header" id="home">
+                <div class="row align-center full-height content">
+                    <div class="col col-6">
+                        <img src="./assets/laptop-with-code.jpg" alt="laptop" />
+                    </div>
+                    <div class="col col-6 container">
+                        <h1>Morgan Evans</h1>
+                        <h3>Frontend Developer</h3>
+                    </div>
+                </div>
+                <a href="#about" class="next-section">
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </div>
+            <div class="viewport" id="about"></div>
+            <div class="viewport" id="education"></div>
+            <div class="viewport" id="work"></div>
+        </main>
         <footer></footer>
     </body>
 </html>
