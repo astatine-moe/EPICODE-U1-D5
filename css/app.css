@@ -106,11 +106,17 @@ body {
 .viewport {
     min-height: 100vh;
 }
+.half-viewport {
+    min-height: 50vh;
+}
+.third-viewport {
+    min-height: 33vh;
+}
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1em;
 }
 
 /*
@@ -202,23 +208,39 @@ nav ul li:hover a {
 
 */
 
+.section {
+    position: relative;
+}
+.section:not(.header) {
+    background-color: white;
+}
+.section:not(.header):nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.top-section,
 .next-section {
     color: var(--accent);
     font-size: 5em;
 
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 
     transition: color var(--nav-timing);
 }
+.next-section {
+    bottom: 0;
+}
+.top-section {
+    top: 0;
+}
+.top-section,
 .next-section:hover {
     color: var(--accent-hover);
 }
 
 #home {
-    position: relative;
     background-color: white;
 }
 #home h1 {
@@ -256,6 +278,82 @@ nav ul li:hover a {
             0 100%
         ); /* remove diagonal line on mobile */
         height: 50%;
+    }
+}
+
+#about {
+    max-width: 1200px;
+    margin: auto;
+}
+/* 1080p or higher */
+@media (min-width: 1920px) {
+    #about {
+        max-width: 1500px;
+    }
+}
+
+#about h2 {
+    font-size: 3.25em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+#about p {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+#about .polaroid {
+}
+#about .polaroid img {
+    position: absolute;
+    width: 15em;
+
+    border: 1em solid white;
+    border-bottom: 5em solid white;
+
+    left: 85%;
+    top: 50%;
+
+    transform: translate(-85%, -50%) rotate(-10deg);
+}
+
+#about .polaroid span {
+    position: absolute;
+    left: 81%;
+    top: 63.5%;
+
+    transform: translate(-81%, -63.5%) rotate(-10deg);
+} /* 1080p or higher */
+@media (min-width: 1920px) {
+    #about .polaroid span {
+        left: 81.5%;
+        top: 62%;
+
+        transform: translate(-81.5%, -62%) rotate(-10deg);
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    #about {
+        padding: 1em;
+    }
+    #about h2 {
+        text-align: center;
+    }
+    #about .polaroid {
+        text-align: center;
+    }
+    #about .polaroid img {
+        border: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    #about .polaroid span {
+        display: none;
     }
 }
 
