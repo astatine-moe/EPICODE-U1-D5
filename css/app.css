@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+:root {
+    --nav-timing: 0.3s;
+}
+
+* {
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* HELPERS */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+/* setup some columns for easy organisation */
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+/*
+
+    !HEADER
+
+*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2em;
+
+    background-color: white;
+    height: 5em;
+    width: 100%;
+    position: fixed;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    height: 5em;
+    line-height: 5em;
+    padding: 0 1em;
+    transition: background-color var(--nav-timing);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-size: 1.2em;
+    display: block;
+    transition: background-color var(--nav-timing);
+}
+nav ul li:hover {
+    background-color: rgba(105, 105, 105, 0.25);
+}
+
+nav ul li:hover a {
+    color: #000;
+}
+
+/*
+
+    !MAIN
+
+*/
+
+/*
+
+    !FOOTER
+
+*/
